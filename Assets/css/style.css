@@ -1,0 +1,608 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --aboutBg-Color: #FAEFF3;
+    --nav-background-Color: #F3D8E2;
+    --heading-Color: #323232;
+    --contact-fonts-Color: #F3D8E2;
+    --btns-Bg-Color: #D8F3FE;
+    --Black-Color: rgb(19, 18, 18);
+    --fonts-Color: #323232;
+    --background-color: #F5FCFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* bottom to top button */
+
+.scroll {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(180deg);
+    width: 50px;
+    height: 50px;
+    background-color: #A53167;
+    bottom: 20px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+a,
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+a:hover,
+li:hover {
+    color: #f31164ad !important;
+    cursor: pointer !important;
+    transition: all 0.50s;
+}
+
+.scroll:hover {
+    background: rgba(0, 0, 0, 0.397);
+
+}
+
+/* navbar */
+
+section {
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-background-Color);
+    padding: 30px 50px;
+    top: 0;
+    position: relative;
+}
+
+.nav-list ul {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-list ul li a {
+    color: var(--fonts-Color);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+
+.hamburger span {
+    display: block;
+    background-color: #080208;
+    margin: 6px 0;
+    width: 32px;
+    height: 4px;
+}
+
+.hamburger span:nth-child(2) {
+    width: 18px;
+    background-color: hsla(300, 11%, 22%, 0.992);
+}
+
+/* Hero */
+
+.hero-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+
+}
+
+.hero-text {
+    width: 100%;
+    max-width: 750px;
+}
+
+.hero-logo {
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--heading-Color);
+}
+
+/* about */
+
+.about-me {
+    display: flex;
+    width: 100%;
+    min-height: 450px;
+    background-color: var(--aboutBg-Color);
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.about-heading {
+    margin-top: 50px;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.about-text {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    height: auto;
+}
+
+.about-text p {
+    width: 100%;
+    max-width: 1080px;
+    font-size: 1.5rem;
+    margin: auto;
+    line-height: 1.2a;
+    font-weight: 500;
+}
+
+/* Portfolio */
+
+.portfolio-container {
+    width: 100%;
+    height: 100%;
+}
+
+.portbg {
+    width: 100%;
+    min-height: 350px;
+    background-image: url(../img/break_image.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: grid;
+    place-items: center;
+}
+
+.port-heading h1 {
+    font-size: 4rem;
+    color: var(--aboutBg-Color);
+    font-weight: 700;
+}
+
+.portfolio-wrapper-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.port_wrapper_inner_heading h1 {
+    color: var(--Black-Color);
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 70px;
+    font-weight: 700;
+}
+
+.portfolio-Wrapper {
+    width: 100%;
+    max-width: 370px;
+}
+
+.portfolio-Wrapper p {
+    margin: 30px 0;
+    font-size: 1.75rem;
+    line-height: 42px;
+    width: 100%;
+    max-width: 340px;
+}
+
+.portfolio-heading {
+    background-color: #07000A;
+    color: #F58200;
+    font-size: 1.75rem;
+    font-weight: 600px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.portfolio-heading.bg-color {
+    background-color: var(--aboutBg-Color);
+    color: #00485E;
+
+}
+
+button.port-btns {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--btns-Bg-Color);
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    color: var(--Black-Color);
+    font-size: 1.875rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Resume */
+
+.my-resume {
+    width: 100%;
+    min-height: 450px;
+    background-image: url(../img/jason-goodman-Oalh2MojUuk-unsplash\ 1.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    z-index: 1;
+}
+
+.my-resume div {
+    margin-right: 200px;
+}
+
+.my-resume::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../img/overlay.png);
+    background-size: cover;
+    z-index: -1;
+}
+
+.my-resume h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Footer */
+
+.contact-us {
+    width: 100%;
+    min-height: 480px;
+    background-color: #263439;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--contact-fonts-Color);
+    position: relative;
+    text-align: center;
+}
+
+.contact-text h4 {
+    margin: 100px 0 70px 0px;
+    font-size: 1.75rem;
+    font-size: 400;
+}
+
+.Social_media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.contact-text p {
+    margin-top: 10px;
+    font-size: 28px;
+    margin-bottom: 50px;
+}
+
+.Contact_option {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.Social_media {
+    margin: 20px 0;
+}
+
+.Contact_option a {
+    color: inherit;
+}
+
+@media (max-width: 1600px) {
+    .hero-container {
+        justify-content: center;
+    }
+
+    .hero-img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .portfolio-wrapper-container {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 1280px) {
+    .hero-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .my-resume div {
+        margin-right: unset;
+    }
+
+    .hero-logo.hide {
+        display: none;
+
+    }
+
+    .hero-logo img {
+        margin-bottom: 10px;
+
+    }
+
+    .hero-img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .about-text p {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .my-resume {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+}
+
+@media (min-width: 1280px) {
+
+    .hero-logo.hidden {
+        display: none;
+
+    }
+
+}
+
+@media (max-width: 992px) {
+    .portfolio-wrapper-container {
+        flex-wrap: wrap;
+        gap: 100px;
+        justify-content: center;
+    }
+
+    .portfolio-Wrapper {
+        text-align: center;
+    }
+
+    .port_wrapper_inner_heading h1 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .logo img {
+        width: 180px;
+    }
+
+    .nav-list ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img {
+        position: relative;
+        z-index: 10;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: -500px;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        padding: 50px 0 30px 0;
+        background-color: var(--nav-background-Color);
+
+    }
+
+    .nav-list.open {
+        transition: all 0.37s;
+        top: calc(100% - 100px);
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 10;
+        transition: 2s;
+    }
+
+    .hamburger.open span:first-child {
+        transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translate(0, -11px) rotate(45deg);
+    }
+}
+
+@media (max-width: 618px) {
+    .scroll {
+        display: none;
+    }
+
+    .hero-img>img {
+        max-width: 400px;
+    }
+
+    .hero-text>h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-text p {
+        max-width: 100%;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 517px) {
+
+    .logo img {
+        width: 130px;
+    }
+
+    .about-me {
+        min-height: 530px;
+    }
+
+    .about-heading {
+        font-size: 32px;
+        margin-top: 40px;
+    }
+
+    .hero-img>img {
+        max-width: 400px;
+    }
+
+    .hero-text>h1 {
+        font-size: 2.5rem;
+    }
+
+    button.port-btns {
+        max-width: auto;
+        font-size: 1.2rem;
+        padding: 20px 10px;
+    }
+
+    .contact-option {
+        font-size: 1rem
+    }
+
+    .Contact_option a {
+        font-size: 1rem;
+        max-width: auto;
+    }
+
+    .contact-text p {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-img>img {
+        max-width: 250px;
+    }
+
+    .logo {
+        z-index: 2;
+    }
+
+    .hero-text>h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-list ul li a {
+        font-size: 1rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+
+
+    .about-me {
+        min-height: auto;
+        text-align: center;
+    }
+
+    .my-resume {
+        text-align: center;
+        width: 100%;
+    }
+
+    h1.about-heading {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 1.4rem;
+    }
+
+    .portfolio-Wrapper img {
+        max-width: 280px;
+    }
+
+    button.port-btns {
+        width: 150px;
+        font-size: 1.2rem;
+        padding: 20px 10px;
+    }
+
+    .portfolio-Wrapper {
+        margin: 0 20px;
+    }
+
+    .portfolio-Wrapper p {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+
+    .contact-us {
+        min-height: 370px;
+    }
+
+    .Social_media {
+        gap: 10px;
+    }
+}
