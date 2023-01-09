@@ -73,6 +73,7 @@ section {
     padding: 30px 50px;
     top: 0;
     position: relative;
+    z-index: 10000;
 }
 
 .nav-list ul {
@@ -326,12 +327,8 @@ button.port-btns {
  }
 
 .contact-us {
-    width: 100%;
-    min-height: 480px;
     background-color: #263439;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
     color: var(--contact-fonts-Color);
     position: relative;
@@ -354,7 +351,7 @@ button.port-btns {
 .contact-text p {
     margin-top: 10px;
     font-size: 28px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .Contact_option {
@@ -364,6 +361,7 @@ button.port-btns {
     align-items: center;
     font-size: 1.75rem;
     font-weight: 100;
+    flex-wrap: wrap;
 }
 
 .Contact_option a {
@@ -470,7 +468,7 @@ iframe {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    margin-left:auto ;
+    margin-left: auto ;
     transition: all 0.50s;
 }
 
@@ -525,7 +523,7 @@ iframe {
     
     .contact-img img{
         width: 200px;
-        border-radius:50% ;
+        border-radius: 50%;
     }
     
     .contact2-form-title {
@@ -739,6 +737,13 @@ iframe {
         opacity: 1;
     }
 
+    @media (max-width: 992px) {
+        .alert-validate::before {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
     @media (max-width: 1350px) {
         .about-me-container {
            flex-direction: column;
@@ -773,13 +778,6 @@ iframe {
         .about-page-heading{
             text-align: center !important;
             margin-bottom:10px ;
-        }
-    }
-    
-    @media (max-width: 992px) {
-        .alert-validate::before {
-            visibility: visible;
-            opacity: 1;
         }
     }
 
@@ -921,11 +919,18 @@ iframe {
     .hamburger.open span:nth-child(3) {
         transform: translate(0, -11px) rotate(45deg);
     }
+
+    .form-container {
+        padding: 0 10px 0 10px;
+    }
+    .contact-text-wrapper {
+        margin-top: 20px;
+    }
 }
 
 @media (max-width: 618px) {
     .scroll {
-        display: none;
+        display: none !important;
     }
 
     .hero-img>img {
@@ -1045,11 +1050,16 @@ iframe {
         margin: 20px 0;
     }
 
-    .contact-us {
-        min-height: 370px;
-    }
-
     .Social_media {
-        gap: 10px;
+        flex-wrap: wrap;
     }
-}
+    
+        .Social_media {
+            gap: 10px;
+        }
+        .contact2-form-title{
+            font-size: 2rem;
+        }
+        
+    
+    }
