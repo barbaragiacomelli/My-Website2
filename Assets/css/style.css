@@ -263,6 +263,26 @@ section {
 
 }
 
+.portfolio-heading-copy {
+    background-color: #faead2;
+    color: #3b3b3b;
+    font-size: 1.75rem;
+    font-weight: 600px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.portfolio-heading-projects {
+    background-color: #9EB79E;
+    color: #142414;
+    font-size: 1.75rem;
+    font-weight: 600px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
 button.port-btns {
     width: 100%;
     margin-top: 20px;
